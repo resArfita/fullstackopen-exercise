@@ -1,0 +1,9 @@
+sequenceDiagram SPA
+    actor User
+    participant Browser
+    participant Server
+
+    User->>Browser: Access SPA
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->>Browser: HTML document
+    Browser-->>User: Display page
