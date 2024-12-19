@@ -4,11 +4,11 @@ sequenceDiagram
     participant Server
 
     User->>Browser: Access page
-    Browser->>Server: GET /exampleapp/notes
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     Server-->>Browser: HTML document
     Browser-->>User: Display page
 
     User->>Browser: Add new list
-    Browser->>Server: POST /exampleapp/notes
+    Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/notes
     Server-->>Browser: Updated list with new item
     Browser-->>User: Display page with new list
