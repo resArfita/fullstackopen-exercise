@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor User
+    participant Browser
+    participant Server
+
+    User->>Browser: Access page
+    Browser->>Server: GET /exampleapp/notes
+    Server-->>Browser: HTML document
+    Browser-->>User: Display page
+
+    User->>Browser: Add new list
+    Browser->>Server: POST /exampleapp/notes
+    Server-->>Browser: Updated list with new item
+    Browser-->>User: Display page with new list
