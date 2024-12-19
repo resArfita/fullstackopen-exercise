@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor User
+    participant Browser
+    participant Server
+
+    User->>Browser: Access page
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->>Browser: HTML document
+    Browser-->>User: Display page
+
+    User->>Browser: Add new list in the form
+    Browser->>Server: POST  https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->>Browser: Updated list with new item
+    Browser-->>User: Display page with new list
